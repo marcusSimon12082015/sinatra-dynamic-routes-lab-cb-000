@@ -16,7 +16,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase]
     @return_string = ""
     @number.times do
-      @return_string += @phrase + "\n"
+      @return_string += "#{@phrase}\n"
     end
     binding.pry
   end
