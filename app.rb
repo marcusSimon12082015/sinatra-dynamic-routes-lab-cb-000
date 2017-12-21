@@ -25,20 +25,21 @@ class App < Sinatra::Base
     "#{params.values.join(" ")}."
   end
 
-  get '/:operation/:number1/:number2' do 
+  get '/:operation/:number1/:number2' do
     @operation = params[:operation]
-    @number1 = params[:number1].to_i 
+    @number1 = params[:number1].to_i
     @number2 = params[:number2].to_i
-    @result = nil  
+    @result = nil
     case @operation
-    when "add" 
+    when "add"
       @result = @number1 + @number2
-    when "subtract" 
+    when "subtract"
       @result = @number1 - @number2
-    when "multiply" 
+    when "multiply"
       @result = @number1 * @number2
     when "divide"
       @result = @number1 / @number2
-    end      
-  end 
+    end
+    "#{@result}"
+  end
 end
