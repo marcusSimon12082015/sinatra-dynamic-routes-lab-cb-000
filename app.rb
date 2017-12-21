@@ -18,6 +18,7 @@ class App < Sinatra::Base
     @number.times do
       @return_string += "#{@phrase}"
     end
+    @return_string
     binding.pry
   end
 end
