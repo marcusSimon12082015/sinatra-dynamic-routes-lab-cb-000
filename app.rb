@@ -12,6 +12,6 @@ class App < Sinatra::Base
     "#{@square}"
   end
   get '/say/:number/:phrase' do
-    erb :phrase.html
+    erb "phrase.html"
   end
 end
