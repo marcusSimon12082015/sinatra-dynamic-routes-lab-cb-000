@@ -19,6 +19,5 @@ class App < Sinatra::Base
       @return_string += "#{@phrase}"
     end
     @return_string
-    binding.pry
   end
 end
